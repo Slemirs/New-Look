@@ -1,11 +1,338 @@
-/*GENERAL*/
+GENERAL*/
 *{
-	margin: 0 auto; 
-	padding: 0 auto;
+	margin: 0; 
+	padding: 0;
+	box-sizing: border-box;
 }
 
 body{
-	max-width: 1600px;
+	width: 1600px;
+	margin: 0 auto;
 }
 
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+ul{
+	padding-left: 0;
+}
+
+ li{
+ 	list-style: none;
+ }
+
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+
+* html .clearfix { height: 1%; }
+
+.clearfix { display: block; }
+/* close commented backslash hack */
 /*GENERAL END*/
+
+/*HEADER*/
+.header-border{
+	border-bottom: 1px solid #ccc;
+	height: 35px;
+}
+
+.header-toolbar{
+	width: 1200px;
+	margin: 15px auto;
+}
+
+/****************************/
+.toolbar-left{
+	float: left;
+}
+
+.lang-box{
+	float: left;
+	border-right: 1px solid #000;
+	padding-right: 20px;
+}
+
+.lang-item{
+	border: none;
+	outline: 0;
+	text-transform: uppercase;
+	padding-left: 40px;
+	padding-right: 25px;
+	background: url(img/usa.png) no-repeat,
+				url(img/arr-lang.png) no-repeat right;
+	-webkit-appearance: none;
+	cursor: pointer;
+}
+
+.auth{
+	float: left;
+	margin-left: 20px;
+	margin-right: 240px;
+}
+
+.auth > span{
+	font-style: italic;
+}
+
+.auth > span > a{
+	color: #000;
+	font-weight: bold;
+}
+/****************************/
+.toolbar-right{
+	float: left;
+}
+
+.search{
+	float: left;
+	margin-right: 20px;
+}
+
+.search > input[type="text"]{
+	width: 300px;
+	border: 0;
+	border-bottom: 1px solid #000;
+	padding-bottom: 5px;
+	outline: 0;
+	font-style: italic;
+	text-indent: 5px;
+}
+
+.search > input[type="submit"]{
+	border: none;
+	padding: 0px 8px;
+	background: url(img/srch.png) no-repeat;
+	background-size: 100% 100%;
+	cursor: pointer;
+}
+
+.wishlist{
+	float: left;
+
+}
+
+.wishlist > span{
+	background: url(img/heart.png) no-repeat left;
+	border-right: 1px solid #ccc;
+	padding: 19px 20px 19px 30px;
+	cursor: pointer;
+}
+
+.cart-box{
+	float: left;
+}
+
+.cart-item,
+.cart-value,
+.cart-dash{
+	float: left;
+	margin-left: 20px;
+}
+
+.cart-item > span{
+	background: url(img/cart.png) no-repeat left;
+
+	padding: 19px 20px 19px 30px;
+	cursor: pointer;
+}
+
+.cart-dash{
+	background:  #000;
+	width: 1px;
+	height: 20px;	
+}
+
+.cart-value > span{
+	border-right: 1px solid #ccc;
+	padding: 19px 20px 19px;
+	cursor: pointer;
+}
+/****************************/
+.header-content{
+	width: 1200px;
+	margin: 35px auto 0;
+}
+
+.content-left{
+	float: left;
+}
+
+.offer{
+	color: #c0c0c0;
+}
+
+.content-center{
+	float: left;
+	margin: 0 170px;
+}
+
+.logo h1{
+	font-weight: normal;
+	font-size: 3em;
+	line-height: 0;
+}
+
+.content-right > .offer{
+	text-align: right;
+	padding-right: 10px;
+}
+/****************************/
+.menu{
+	width: 1200px;
+	margin: 65px auto 0;
+}
+
+.menu li{
+	float: left;
+	margin: 0 19px;
+}
+
+.menu li:first-child{
+	margin-left: 0;
+}
+
+.menu li:last-child{
+	margin-right: 0;
+}
+
+.menu a{
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #000;
+	font-size: 16pt;
+}
+
+.menu a:hover{
+	color: #f00;
+}
+/*HEADER END*/
+
+/*CONTENT START*/
+
+.content-box{
+	margin-top: 30px;
+}
+/************/
+
+.jumbotron{
+	height: 588px;
+	background: url(img/banner.jpg) no-repeat;
+	background-size: cover;
+}
+
+.jumbotron-content{
+	width: 550px;
+	margin: 0 auto;
+	text-align: center;
+	color: #fff;
+	padding-top: 250px;
+}
+
+.jumbotron-item h3{
+	font-size: 14pt;
+	letter-spacing: 3px;
+}
+
+.jumbotron-item h3:before{
+	content: "";
+	background: url(img/line.png);
+	width: 23px;
+	height: 1px;
+	display: inline-block;
+	margin-right: 16px;
+	margin-bottom: 4px;
+}
+.jumbotron-item h3:after{
+	content: "";
+	background: url(img/line.png);
+	width: 23px;
+	height: 1px;
+	display: inline-block;
+	margin-left: 16px;
+	margin-bottom: 4px;
+}
+
+.jumbotron-item h2{
+	font-size: 3em;
+	font-weight: normal;
+}
+
+.jumbotron-item button{
+	text-transform: uppercase;
+	background: transparent;
+	border: 1px solid #fff;
+	color: #fff;
+	padding: 15px 40px;
+	cursor: pointer;
+	transition: 0.3s;
+	letter-spacing: 3px;
+}
+
+.jumbotron-item button:hover{
+	background: #fff;
+	color: #000;
+	border: 1px solid #000;
+}
+
+/*******************/
+
+.banner{
+	height: 400px;
+}
+
+.banner-left{
+	background: url(img/texture.png);
+	height: 400px;
+	width: calc(1600px - 680px);
+	float: left;
+	text-align: center;
+}
+
+.banner-right{
+	float: left;
+	background: url(img/banner2.jpg);
+	background-size: 100% 100%;
+	height: 400px;
+	width: 680px;
+}
+
+.banner-left h2{
+	padding-top: 70px;
+	font-size: 30pt;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.banner-left p{
+	padding: 0 120px;
+	font-size: 14pt;
+}
+
+.banner-left .price{
+	font-size: 30pt;
+	padding-top: 20px;
+}
+
+.banner-item button{
+	text-transform: uppercase;
+	background: transparent;
+	border: 1px solid #fff;
+	color: #fff;
+	padding: 15px 40px;
+	cursor: pointer;
+	transition: 0.3s;
+	letter-spacing: 3px;
+}
+
+
+.banner-left .banner-item button:hover{
+	background: #fff;
+	color: #000;
+	border: 1px solid #000;
+}
